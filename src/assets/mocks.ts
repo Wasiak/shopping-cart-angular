@@ -1,5 +1,6 @@
 import { User } from '../app/interfaces/user.interface';
 import { Game } from '../app/interfaces/game.interface';
+import { Baner } from '../app/interfaces/baner.interface';
 
 export const loggedUser: User = {
   id: 1,
@@ -13,8 +14,8 @@ export const games: Game[] = [
     id: 'cyberpunk-adventure',
     title: 'Cyberpunk Adventure 2: The New World',
     description: 'An immersive cyberpunk RPG with stunning graphics and deep storytelling.',
-    image: 'https://lorempixel.com/200/100/abstract/1',
-    thumb: 'https://lorempixel.com/80/40/abstract/1',
+    image: 'https://picsum.photos/id/1/200/100',
+    thumb: 'https://picsum.photos/id/1/80/40',
     basePrice: 59.99,
     discountInPercent: 50,
     currentPrice: 29.99
@@ -23,8 +24,8 @@ export const games: Game[] = [
     id: 'space-explorer',
     title: 'Space Explorer',
     description: 'Explore vast galaxies and discover new worlds in this space simulation game.',
-    image: 'https://lorempixel.com/200/100/abstract/2',
-    thumb: 'https://lorempixel.com/80/40/abstract/2',
+    image: 'https://picsum.photos/id/2/200/100',
+    thumb: 'https://picsum.photos/id/2/80/40',
     basePrice: 39.99,
     discountInPercent: 0,
     currentPrice: 39.99
@@ -33,8 +34,8 @@ export const games: Game[] = [
     id: 'medieval-quest',
     title: 'Medieval Quest: The Return of the King',
     description: 'Embark on epic quests in a medieval fantasy world filled with magic and monsters.',
-    image: 'https://lorempixel.com/200/100/abstract/3',
-    thumb: 'https://lorempixel.com/80/40/abstract/3',
+    image: 'https://picsum.photos/id/3/200/100',
+    thumb: 'https://picsum.photos/id/3/80/40',
     basePrice: 49.99,
     discountInPercent: 50,
     currentPrice: 24.99
@@ -43,8 +44,8 @@ export const games: Game[] = [
     id: 'racing-legends',
     title: 'Racing Legends',
     description: 'High-speed racing action with realistic physics and stunning car models.',
-    image: 'https://lorempixel.com/200/100/abstract/4',
-    thumb: 'https://lorempixel.com/80/40/abstract/4',
+    image: 'https://picsum.photos/id/4/200/100',
+    thumb: 'https://picsum.photos/id/4/80/40',
     basePrice: 29.99,
     discountInPercent: 0,
     currentPrice: 29.99
@@ -53,10 +54,18 @@ export const games: Game[] = [
     id: 'puzzle-master',
     title: 'Puzzle Master: director\'s cut',
     description: 'Challenge your mind with hundreds of brain-teasing puzzles and logic games.',
-    image: 'https://lorempixel.com/200/100/abstract/5',
-    thumb: 'https://lorempixel.com/80/40/abstract/5',
+    image: 'https://picsum.photos/id/5/200/100',
+    thumb: 'https://picsum.photos/id/5/80/40',
     basePrice: 19.99,
     discountInPercent: 0,
     currentPrice: 19.99
   }
 ];
+
+export const baner: Baner = {
+  id: 1,
+  title: 'Summer Game Sale',
+  image: 'https://picsum.photos/id/6/1200/450',
+  link: '/sales/summer'
+};
+

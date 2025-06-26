@@ -1,0 +1,17 @@
+<div class="home-container">
+  <app-header></app-header>
+  <!-- Banner Section -->
+  <div class="banner-section" *ngIf="banner && !loading">
+    <div class="banner">
+      <img [src]="banner.image" [alt]="banner.title">
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading" *ngIf="loading">
+    <p>Loading...</p>
+  </div>
+
+  <!-- Games List Section -->
+  <app-games-list [games]="games" [user]="user" *ngIf="!loading"></app-games-list>
+</div>

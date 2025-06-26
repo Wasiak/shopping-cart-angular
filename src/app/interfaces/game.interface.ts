@@ -8,3 +8,8 @@ export interface Game {
   discountInPercent: number;
   currentPrice: number;
 }
+
+export interface HomeGame extends Game {
+  inCart?: boolean;
+  owned?: boolean;
+}

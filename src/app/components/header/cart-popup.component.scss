@@ -1,0 +1,145 @@
+.cart-popup-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  margin-left: 1.5rem;
+  outline: none;
+}
+
+.cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #444;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.cart-popup {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  min-width: 320px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 1000;
+  padding: 0;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.cart-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #fff;
+}
+
+.cart-popup-title {
+  color: #222;
+  font-weight: 700;
+}
+
+.cart-popup-total {
+  color: #222;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.cart-popup-clear {
+  background: #a259e6;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.4rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cart-popup-clear:hover {
+  background: #7c3fc9;
+}
+
+.cart-popup-list {
+  max-height: 260px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.cart-popup-item {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #f2f2f2;
+  background: #fff;
+}
+
+.cart-popup-thumb {
+  width: 48px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-right: 0.8rem;
+  background: #eee;
+}
+
+.cart-popup-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cart-popup-item-title {
+  font-size: 0.97rem;
+  color: #222;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.cart-popup-remove {
+  color: #a259e6;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 2px;
+  width: fit-content;
+}
+
+.cart-popup-item-price {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 700;
+  margin-left: 1rem;
+  white-space: nowrap;
+}

@@ -1,0 +1,41 @@
+<div class="games-list-container">
+  <div class="games-grid" *ngIf="games.length > 0; else noGames">
+    <div class="game-card" *ngFor="let game of games">
+      <div class="game-image">
+        <img [src]="game.image" [alt]="game.title">
+        <div class="discount-badge" *ngIf="game.discountInPercent > 0">
+          -{{ game.discountInPercent }}%
+        </div>
+      </div>
+
+      <div class="game-info">
+        <h3 class="game-title">{{ game.title | uppercase }}</h3>
+        <div class="game-status-row">
+          <ng-container *ngIf="game.owned; else notOwned">
+            <span class="status-label owned">OWNED</span>
+          </ng-container>
+          <ng-template #notOwned>
+            <ng-container *ngIf="game.inCart; else notInCart">
+              <span class="status-label in-cart">IN CART</span>
+            </ng-container>
+            <ng-template #notInCart>
+              <ng-container *ngIf="game.discountInPercent > 0">
+                <span class="discount-badge">-{{ game.discountInPercent }}%</span>
+                <span class="current-price clickable" (click)="addToCart(game)">${{ game.currentPrice }}</span>
+              </ng-container>
+              <ng-container *ngIf="game.discountInPercent === 0">
+                <span class="current-price clickable" (click)="addToCart(game)">${{ game.currentPrice }}</span>
+              </ng-container>
+            </ng-template>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noGames>
+    <div class="no-games">
+      <p>No games available at the moment.</p>
+    </div>
+  </ng-template>
+</div>
