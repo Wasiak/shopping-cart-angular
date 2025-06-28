@@ -7,7 +7,9 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  padding: 0 0.5rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .game-card {
@@ -123,22 +125,110 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 1200px) {
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .games-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .games-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Small Desktop / Large Tablet */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .games-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) and (min-width: 768px) {
   .games-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 0 1rem;
+  }
+
+  .game-card {
+    height: 200px;
+  }
+
+  .game-info {
+    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+
+    .game-title {
+      font-size: 0.9rem;
+    }
   }
 }
-@media (max-width: 900px) {
+
+/* Large Mobile */
+@media (max-width: 767px) and (min-width: 576px) {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .game-card {
+    height: 190px;
+  }
+
+  .game-info {
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+
+    .game-title {
+      font-size: 0.85rem;
+    }
+
+    .status-label,
+    .discount-badge {
+      font-size: 0.8rem;
+      padding: 1px 8px;
+    }
   }
 }
-@media (max-width: 600px) {
+
+/* Mobile */
+@media (max-width: 575px) {
+  .games-list-container {
+    padding: 1rem 0;
+  }
+
   .games-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 0 1rem;
   }
+
+  .game-card {
+    height: 180px;
+  }
+
   .game-info {
-    padding: 0.8rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+
+    .game-title {
+      font-size: 0.85rem;
+    }
+
+    .status-label,
+    .discount-badge {
+      font-size: 0.8rem;
+      padding: 1px 8px;
+    }
+
+    .current-price {
+      font-size: 0.9rem;
+    }
   }
 }
