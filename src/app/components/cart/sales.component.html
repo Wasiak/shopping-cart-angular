@@ -1,0 +1,14 @@
+<div class="cart-container">
+  <h1>{{ title }}</h1>
+
+  <!-- Banner Section -->
+  <div class="banner-section" *ngIf="banner">
+    <div class="banner">
+      <img [src]="banner.image" [alt]="banner.title">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <a routerLink="/" class="go-home-btn">Go Home</a>
+  </div>
+</div>

@@ -12,7 +12,7 @@
     <div class="cart-popup-header">
       <span class="cart-popup-title">{{ cart.length }} ITEM{{ cart.length !== 1 ? 'S' : '' }} IN CART</span>
       <span class="cart-popup-total">${{ totalPrice.toFixed(2) }}</span>
-      <button class="cart-popup-clear" (click)="clearCart()">CLEAR CART</button>
+      <button class="cart-popup-clear" (click)="clearCart()" [disabled]="cart.length === 0">CLEAR CART</button>
     </div>
     <div class="cart-popup-list">
       <div class="cart-popup-item" *ngFor="let item of cart">

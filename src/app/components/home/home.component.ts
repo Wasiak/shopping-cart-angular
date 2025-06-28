@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { GamesService } from '../../services/games.service';
 import { UserService } from '../../services/user.service';
 import { User } from '../../interfaces/user.interface';
@@ -25,11 +25,16 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private gamesService: GamesService,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {}
 
   ngOnInit() {
     this.loadData();
+  }
+
+  navigateToSales() {
+    this.router.navigate(['/sales']);
   }
 
   private loadData() {

@@ -31,9 +31,14 @@ export class CartPopupComponent {
 
   clearCart() {
     this.cartService.clearCart();
+    this.showPopup = false;
   }
 
   removeItem(item: Game) {
     this.cartService.removeFromCart(item);
+    // Check if cart becomes empty after removing the item
+    if (!this.cart.length) {
+      this.showPopup = false;
+    }
   }
 }

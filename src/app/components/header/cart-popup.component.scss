@@ -87,6 +87,16 @@
   background: #7c3fc9;
 }
 
+.cart-popup-clear:disabled {
+  background: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.cart-popup-clear:disabled:hover {
+  background: #ccc;
+}
+
 .cart-popup-list {
   max-height: 260px;
   overflow-y: auto;
