@@ -5,7 +5,6 @@ import { GamesService } from '../../services/games.service';
 import { UserService } from '../../services/user.service';
 import { User } from '../../interfaces/user.interface';
 import { GamesListComponent } from '../games-list/games-list.component';
-import { HeaderComponent } from '../header/header.component';
 import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HomeGame } from '../../interfaces/game.interface';
@@ -13,7 +12,7 @@ import { HomeGame } from '../../interfaces/game.interface';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, GamesListComponent, HeaderComponent],
+  imports: [CommonModule, RouterModule, GamesListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

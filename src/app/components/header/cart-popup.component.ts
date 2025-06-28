@@ -30,7 +30,7 @@ export class CartPopupComponent {
   }
 
   clearCart() {
-    this.cart.forEach(item => this.cartService.removeFromCart(item));
+    this.cartService.clearCart();
   }
 
   removeItem(item: Game) {

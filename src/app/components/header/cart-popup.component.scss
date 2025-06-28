@@ -134,6 +134,12 @@
   text-decoration: underline;
   margin-top: 2px;
   width: fit-content;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cart-popup-item:hover .cart-popup-remove {
+  opacity: 1;
 }
 
 .cart-popup-item-price {

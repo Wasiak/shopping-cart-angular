@@ -22,4 +22,8 @@ export class CartService {
   removeFromCart(item: Game): void {
     this.cartSubject.next(this.cart.filter(g => g.id !== item.id));
   }
+
+  clearCart(): void {
+    this.cartSubject.next([]);
+  }
 }
