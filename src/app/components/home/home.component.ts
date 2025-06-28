@@ -17,7 +17,6 @@ import { HomeGame } from '../../interfaces/game.interface';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  title = 'Welcome to Shopping Cart';
   games: HomeGame[] = [];
   user: User | null = null;
   banner: any = null;
