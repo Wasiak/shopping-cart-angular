@@ -1,6 +1,6 @@
 .home-container {
   text-align: center;
-  padding: 2rem;
+  // padding: 2rem 0;
 
   h1 {
     color: #333;
@@ -11,6 +11,14 @@
     color: #666;
     margin-bottom: 2rem;
     font-size: 1.1rem;
+  }
+
+  .title {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: left;
   }
 
   .actions {
@@ -34,13 +42,13 @@
   }
 
   .banner-section {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
     .banner {
       position: relative;
       height: 450px;
       overflow: hidden;
-      border-radius: 12px;
+      // border-radius: 12px;
       max-width: 1400px;
       margin: 0 auto;
 
@@ -108,7 +116,7 @@
 /* Large Desktop */
 @media (min-width: 1400px) {
   .home-container {
-    padding: 3rem 2rem;
+    // padding: 3rem 0;
 
     .banner-section .banner {
       height: 500px;
@@ -130,10 +138,10 @@
 /* Tablet */
 @media (max-width: 991px) and (min-width: 768px) {
   .home-container {
-    padding: 1.5rem;
+    // padding: 1.5rem;
 
     .banner-section {
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
 
       .banner {
         height: 300px;
@@ -150,10 +158,10 @@
 /* Mobile */
 @media (max-width: 767px) {
   .home-container {
-    padding: 1rem;
+    // padding: 1rem;
 
     .banner-section {
-      margin-bottom: 1.5rem;
+      // margin-bottom: 1.5rem;
 
       .banner {
         height: 200px;
