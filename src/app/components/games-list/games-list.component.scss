@@ -1,13 +1,7 @@
-.games-list-container {
-  // padding: 2rem 0;
-  // background: #ededf2;
-}
-
 .games-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  // padding: 0 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -18,11 +12,9 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   overflow: hidden;
   transition: box-shadow 0.2s;
-  border: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  // height: 184px;
   align-items: stretch;
 
   &:hover {
@@ -32,7 +24,6 @@
 
 .game-image {
   position: relative;
-  // height: 90px;
   overflow: hidden;
   background: #f5f5f5;
 
@@ -51,11 +42,11 @@
   justify-content: flex-start;
   align-items: stretch;
   padding: 0.5rem;
+  font-size: 0.8rem;
 
   .game-title {
     color: #222;
     margin: 0 0 0.5rem 0;
-    font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.2px;
     line-height: 1.2;
@@ -64,6 +55,7 @@
     white-space: normal;
     word-break: break-word;
     height: 38px;
+    font-size: 0.8rem;
   }
 
   .game-status-row {
@@ -78,19 +70,19 @@
   .status-label,
   .discount-badge {
     display: inline-block;
-    font-size: 0.85rem;
     font-weight: 700;
     padding: 2px 10px;
-    border-radius: 4px;
+    border-radius: 3px;
     letter-spacing: 0.5px;
     line-height: 1.7;
     vertical-align: middle;
     white-space: nowrap;
+    font-size: 0.8rem;
   }
   .discount-badge {
-    background: #e6f4ea;
-    color: #2ecc71;
-    border: 1px solid #b7e4c7;
+    background: #057726;
+    color: #fff;
+    border: 1px solid #057726;
   }
   .status-label.owned {
     background: #f2f2f2;
@@ -98,25 +90,35 @@
     border: 1px solid #e0e0e0;
   }
   .status-label.in-cart {
-    background: #eaf1fb;
-    color: #1976d2;
-    border: 1px solid #b3d1f7;
+    background: #f2f2f2;
+    color: #888;
+    border: 1px solid #888;
   }
   .current-price {
-    font-size: 0.95rem;
+    display: inline-block;
     font-weight: 700;
-    color: #222;
+    color: #444;
     vertical-align: middle;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    background: #fff;
+    margin-left: 0.2rem;
+    transition: color 0.2s, border-color 0.2s;
   }
 }
 
 .current-price.clickable {
   cursor: pointer;
-  color: #a259e6;
-  transition: color 0.2s;
+  color: #666;
+  border-color: #bbb;
 }
 .current-price.clickable:hover {
-  color: #7c3fc9;
+  color: #222;
+  border-color: #888;
 }
 
 .no-games {
@@ -130,7 +132,6 @@
 @media (min-width: 1400px) {
   .games-grid {
     grid-template-columns: repeat(5, 1fr);
-    // gap: 2rem;
   }
 }
 
@@ -138,7 +139,6 @@
 @media (max-width: 1399px) and (min-width: 1200px) {
   .games-grid {
     grid-template-columns: repeat(5, 1fr);
-    // gap: 1.5rem;
   }
 }
 
@@ -146,7 +146,6 @@
 @media (max-width: 1199px) and (min-width: 992px) {
   .games-grid {
     grid-template-columns: repeat(4, 1fr);
-    // gap: 1.5rem;
     padding: 0 1.5rem;
   }
 }
@@ -155,7 +154,6 @@
 @media (max-width: 991px) and (min-width: 768px) {
   .games-grid {
     grid-template-columns: repeat(3, 1fr);
-    // gap: 1.25rem;
     padding: 0 1rem;
   }
 
@@ -176,7 +174,6 @@
 @media (max-width: 767px) and (min-width: 576px) {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
-    // gap: 1rem;
     padding: 0 1rem;
   }
 
@@ -207,7 +204,6 @@
 
   .games-grid {
     grid-template-columns: 1fr;
-    // gap: 1rem;
     padding: 0 1rem;
   }
 

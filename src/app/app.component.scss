@@ -1,6 +1,7 @@
 .navbar {
-  background-color: #333;
-  color: white;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   padding: 1rem 0;
 
   .nav-container {
@@ -14,6 +15,8 @@
     h1 {
       margin: 0;
       font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .nav-links {
@@ -21,22 +24,58 @@
       gap: 2rem;
 
       a {
-        color: white;
+        color: #222;
         text-decoration: none;
         padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: background-color 0.3s;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: background-color 0.3s, color 0.3s;
 
         &:hover {
-          background-color: #555;
+          background-color: #f0e6fa;
+          color: #a259e6;
         }
 
         &.active {
-          background-color: #007bff;
+          background-color: #a259e6;
+          color: #fff;
         }
       }
     }
   }
+}
+
+.button, button, .btn {
+  background: #a259e6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(162,89,230,0.08);
+}
+.button:hover, button:hover, .btn:hover {
+  background: #7c3fe6;
+}
+
+.card, .game-card, .cart-popup {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+}
+
+.discount {
+  background: #50e3c2;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .main-content {

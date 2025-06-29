@@ -10,16 +10,16 @@
   height: 100%;
   width: 48px;
   box-sizing: border-box;
+  background: #fff;
 }
 
 .cart-icon-btn {
-  background: none;
   border: none;
   cursor: pointer;
   position: relative;
   padding: 10px;
-  // margin-left: 1.5rem;
   outline: none;
+  background: #fff;
 }
 
 .cart-icon {
@@ -32,11 +32,8 @@
   position: absolute;
   top: 2px;
   right: -19px;
-  // background: #444;
-  // color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
-  // border-radius: 50%;
   padding: 2px 6px;
   min-width: 18px;
   text-align: center;
@@ -47,13 +44,11 @@
   position: absolute;
   top: 48px;
   right: 0;
-  min-width: 320px;
+  min-width: 340px;
   background: #fff;
-  // border-radius: 4px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   z-index: 1000;
   padding: 0;
-  // margin-top: 8px;
   overflow: hidden;
 }
 
@@ -61,9 +56,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   border-bottom: 1px solid #eee;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
   background: #fff;
 }
@@ -80,19 +75,18 @@
 }
 
 .cart-popup-clear {
-  background: #a259e6;
+  background: linear-gradient(180deg, #a259e6 0%, #7c3fc9 100%);
   color: #fff;
   border: none;
-  // border-radius: 3px;
-  padding: 0.4rem 1.1rem;
+  padding: 0.6rem 1.1rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   margin-left: 1rem;
   cursor: pointer;
   transition: background 0.2s;
 }
 .cart-popup-clear:hover {
-  background: #7c3fc9;
+  background: linear-gradient(180deg, #7c3fc9 0%, #5a2e91 100%);
 }
 
 .cart-popup-clear:disabled {
@@ -106,8 +100,6 @@
 }
 
 .cart-popup-list {
-  max-height: 260px;
-  overflow-y: auto;
   background: #fff;
 }
 
@@ -120,10 +112,9 @@
 }
 
 .cart-popup-thumb {
-  width: 48px;
-  height: 32px;
+  width: 90px;
+  height: 45px;
   object-fit: cover;
-  // border-radius: 3px;
   margin-right: 0.8rem;
   background: #eee;
 }
@@ -133,27 +124,29 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+
 }
 
 .cart-popup-item-title {
-  font-size: 0.97rem;
+  font-size: 0.7rem;
   color: #222;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 160px;
+  text-transform: uppercase;
 }
 
 .cart-popup-remove {
-  color: #a259e6;
-  font-size: 0.85rem;
+  font-size: 0.6rem;
   cursor: pointer;
   text-decoration: underline;
   margin-top: 2px;
   width: fit-content;
   opacity: 0;
   transition: opacity 0.2s ease;
+
 }
 
 .cart-popup-item:hover .cart-popup-remove {
@@ -161,7 +154,7 @@
 }
 
 .cart-popup-item-price {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #222;
   font-weight: 700;
   margin-left: 1rem;
