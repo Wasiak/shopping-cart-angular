@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GamesService } from '../../services/games.service';
@@ -10,19 +10,16 @@ import { GamesService } from '../../services/games.service';
   templateUrl: './sales.component.html',
   styleUrl: './sales.component.scss'
 })
-export class SalesComponent implements OnInit {
+export class SalesComponent {
   title = 'Sales';
-  banner: any = null;
 
-  constructor(private gamesService: GamesService) {}
+  // Use signals from the service
+  banner: any;
+  gamesOnSale: any;
 
-  ngOnInit() {
-    this.loadBanner();
-  }
-
-  private loadBanner() {
-    this.gamesService.getBaner().subscribe(banner => {
-      this.banner = banner;
-    });
+  constructor(private gamesService: GamesService) {
+    // Initialize signals after constructor
+    this.banner = this.gamesService.banner;
+    this.gamesOnSale = this.gamesService.gamesOnSale;
   }
 }

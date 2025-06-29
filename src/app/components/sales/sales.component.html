@@ -2,9 +2,9 @@
   <h1>{{ title }}</h1>
 
   <!-- Banner Section -->
-  <div class="banner-section" *ngIf="banner">
+  <div class="banner-section" *ngIf="banner()">
     <div class="banner">
-      <img [src]="banner.image" [alt]="banner.title">
+      <img [src]="banner().image" [alt]="banner().title">
     </div>
   </div>
 

@@ -2,17 +2,17 @@
 
   <p class="title">Game of the week</p>
   <!-- Banner Section -->
-  <div class="banner-section" *ngIf="banner && !loading">
+  <div class="banner-section" *ngIf="banner() && !loading()">
     <div class="banner" (click)="navigateToSales()" style="cursor: pointer;">
-      <img [src]="banner.image" [alt]="banner.title">
+      <img [src]="banner().image" [alt]="banner().title">
     </div>
   </div>
 
   <!-- Loading State -->
-  <div class="loading" *ngIf="loading">
+  <div class="loading" *ngIf="loading()">
     <p>Loading...</p>
   </div>
 
   <!-- Games List Section -->
-  <app-games-list [games]="games" [user]="user" *ngIf="!loading"></app-games-list>
+  <app-games-list [games]="gamesWithUserData()" [user]="user()" *ngIf="!loading()"></app-games-list>
 </div>

@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { GamesService } from '../../services/games.service';
 import { UserService } from '../../services/user.service';
 import { User } from '../../interfaces/user.interface';
 import { GamesListComponent } from '../games-list/games-list.component';
-import { combineLatest } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { HomeGame } from '../../interfaces/game.interface';
+import { HomeGame, Game } from '../../interfaces/game.interface';
 
 @Component({
   selector: 'app-home',
@@ -16,49 +14,42 @@ import { HomeGame } from '../../interfaces/game.interface';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
-  games: HomeGame[] = [];
-  user: User | null = null;
-  banner: any = null;
-  loading = true;
+export class HomeComponent {
+  // Use signals from services
+  games: any;
+  user: any;
+  banner: any;
+  loading: any;
+
+  // Computed signal that combines games with user data
+  gamesWithUserData: any;
 
   constructor(
     private gamesService: GamesService,
     private userService: UserService,
     private router: Router
-  ) {}
+  ) {
+    // Initialize signals after constructor
+    this.games = this.gamesService.games;
+    this.user = this.userService.user;
+    this.banner = this.gamesService.banner;
+    this.loading = this.gamesService.loading;
 
-  ngOnInit() {
-    this.loadData();
+    this.gamesWithUserData = computed(() => {
+      const games = this.games();
+      const user = this.user();
+
+      if (!user || !games.length) return [];
+
+      return games.map((game: Game) => ({
+        ...game,
+        owned: user.collection.includes(game.id),
+        inCart: false // Will be handled by games-list component
+      }));
+    });
   }
 
   navigateToSales() {
     this.router.navigate(['/sales']);
-  }
-
-  private loadData() {
-    // Combine games and user, and mark owned
-    combineLatest([
-      this.gamesService.getAllGames(),
-      this.userService.getLoggedUser()
-    ]).pipe(
-      map(([games, user]) => {
-        this.user = user;
-        return games.map(game => ({
-          ...game,
-          owned: user.collection.includes(game.id),
-          inCart: false // TODO: Replace with cart logic
-        }));
-      })
-    ).subscribe((games: HomeGame[]) => {
-      console.log(games);
-      this.games = games;
-    });
-
-    // Load banner
-    this.gamesService.getBaner().subscribe(banner => {
-      this.banner = banner;
-      this.loading = false;
-    });
   }
 }

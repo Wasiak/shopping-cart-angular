@@ -1,6 +1,6 @@
 <div class="games-list-container">
-  <div class="games-grid" *ngIf="games.length > 0; else noGames">
-    <div class="game-card" *ngFor="let game of games">
+  <div class="games-grid" *ngIf="gamesWithCartStatus().length > 0; else noGames">
+    <div class="game-card" *ngFor="let game of gamesWithCartStatus()">
       <div class="game-image">
         <img [src]="game.image" [alt]="game.title">
         <!-- <div class="discount-badge" *ngIf="game.discountInPercent > 0">
